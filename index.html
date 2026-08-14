@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffd6e5">
+<title>Untuk Jihan ♡ — our little story</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:#fff8fb;color:#3d2931;overflow-x:hidden}
+button{font:inherit}
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg span{position:absolute;bottom:-40px;color:#e7789d;opacity:.22;font-size:22px;animation:floatUp linear infinite}
+.bg span:nth-child(1){left:5%;animation-duration:10s}
+.bg span:nth-child(2){left:18%;animation-duration:13s;animation-delay:2s}
+.bg span:nth-child(3){left:33%;animation-duration:9s;animation-delay:5s}
+.bg span:nth-child(4){left:51%;animation-duration:14s;animation-delay:1s}
+.bg span:nth-child(5){left:68%;animation-duration:11s;animation-delay:4s}
+.bg span:nth-child(6){left:84%;animation-duration:15s;animation-delay:3s}
+.bg span:nth-child(7){left:95%;animation-duration:10s;animation-delay:7s}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.35}100%{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.music{position:fixed;right:16px;top:16px;z-index:50;width:50px;height:50px;border:1px solid #efadc3;border-radius:50%;background:#fff;box-shadow:0 12px 35px #b34d7128;color:#c75f83;cursor:pointer;font-size:19px}
+.music.playing{animation:spin 3s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:45px 25px;position:relative;z-index:1;background:
+radial-gradient(circle at 10% 15%,#ffd4e3 0,transparent 28%),
+radial-gradient(circle at 90% 75%,#ffe9f1 0,transparent 32%),
+#fff8fb}
+.hero-inner{max-width:760px}
+.kicker{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#b86a83}
+.hero h1{font:400 clamp(72px,18vw,160px)/.8 "DM Serif Display",serif;margin:30px 0 25px}
+.hero h1 em{font-style:normal;color:#d66d92}
+.hero p{max-width:600px;margin:auto;line-height:2;color:#765a64}
+.btn{display:inline-block;margin-top:30px;padding:14px 24px;border:0;border-radius:999px;background:#d97698;color:#fff;text-decoration:none;box-shadow:0 14px 35px #cb5b7d2d;cursor:pointer}
+.scroll{position:absolute;bottom:22px;left:0;right:0;font-size:10px;letter-spacing:3px;color:#b47a8c}
+.wrap{max-width:920px;margin:auto;padding:115px 26px}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:#c56c88}
+h2{font:400 clamp(45px,8vw,82px)/.96 "DM Serif Display",serif;margin-top:15px}
+.story{max-width:700px;margin-top:38px;line-height:2.05;color:#705760}
+.story p+p{margin-top:20px}
+.photo-section{padding:35px 20px 115px;max-width:1000px;margin:auto}
+.photo-card{background:#fff;padding:12px;box-shadow:0 25px 65px #6b35451c;margin:25px auto;max-width:720px;transform:rotate(-1.2deg);transition:.5s;position:relative}
+.photo-card:nth-child(even){transform:rotate(1.1deg)}
+.photo-card:hover{transform:rotate(0) scale(1.015)}
+.photo-card img{display:block;width:100%;max-height:760px;object-fit:cover}
+.caption{text-align:center;font-size:12px;line-height:1.8;color:#876a75;padding:18px 10px 8px}
+.tape{position:absolute;width:105px;height:28px;background:#ffc2d2aa;top:-13px;left:calc(50% - 52px);transform:rotate(-3deg)}
+.gallery{padding:110px 20px;max-width:1050px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:45px}
+.grid figure{overflow:hidden;aspect-ratio:1;background:#f9e9ef;box-shadow:0 18px 45px #6b35451a}
+.grid figure:first-child{grid-row:span 2;aspect-ratio:auto}
+.grid figure:last-child{grid-column:span 2;aspect-ratio:2/1}
+.grid img{width:100%;height:100%;object-fit:cover;transition:.7s}
+.grid figure:hover img{transform:scale(1.07)}
+.letter-bg{background:linear-gradient(145deg,#ffdce8,#fff0f5);padding:120px 20px}
+.letter{max-width:800px;margin:auto;background:#fffdfb;padding:clamp(34px,7vw,78px);box-shadow:0 28px 75px #6d334318;position:relative}
+.letter:before{content:"";position:absolute;inset:15px;border:1px solid #efd2dc;pointer-events:none}
+.hello{font:400 27px "DM Serif Display",serif;color:#c86688;margin-bottom:25px}
+.letter h2{margin-bottom:38px}
+.letter p{line-height:2.05;color:#6d565e}
+.letter p+p{margin-top:20px}
+.funny{background:#fff0f5;padding:120px 25px;text-align:center}
+.funny .emoji{font-size:54px;display:block;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-9px) rotate(4deg)}}
+.funny p{max-width:700px;margin:35px auto 0;line-height:2;color:#735963}
+.timeline{max-width:720px;margin:60px auto 0;border-left:1px solid #e3a7bb;padding-left:35px;text-align:left}
+.item{margin-bottom:58px;position:relative}
+.dot{position:absolute;width:12px;height:12px;border-radius:50%;background:#d97797;left:-41px;top:5px;box-shadow:0 0 0 7px #fff0f5}
+.item span{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#c86c89}
+.item h3{font:400 28px "DM Serif Display",serif;margin:8px 0}
+.item p{line-height:1.9;color:#765c65}
+.dark{background:#33242b;color:#fff7fa;padding:135px 25px}
+.dark .inside{max-width:760px;margin:auto}
+.dark .eyebrow{color:#e6a8bb}
+.dark h2{margin-bottom:42px}
+.dark p{line-height:2.1;color:#ead9df}
+.dark strong{color:#fff}
+.promise{padding:135px 25px;text-align:center;background:radial-gradient(circle at 30% 20%,#ffdce8,transparent 34%),#fff8fb}
+.heart{font-size:92px;color:#d97296;display:inline-block;animation:beat 1.5s infinite}
+@keyframes beat{15%{transform:scale(1.14)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.final{height:92svh;min-height:600px;position:relative;overflow:hidden}
+.final img{width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
+.overlay{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:#fff;padding:25px;background:linear-gradient(#00000005,#00000076)}
+.overlay p{letter-spacing:3px;font-size:10px}
+.overlay h2{font-size:clamp(55px,10vw,110px);margin:18px}
+.overlay span{font-size:45px}
+.end{padding:110px 25px;text-align:center;background:#fff8fb}
+.end p{max-width:600px;margin:28px auto 0;line-height:2;color:#735963}
+.sign{margin-top:35px;font-size:12px;line-height:2;color:#a06f80}
+.reveal{opacity:0;transform:translateY(25px);transition:1s ease}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:650px){
+ .grid{grid-template-columns:1fr 1fr;gap:9px}
+ .grid figure:first-child{grid-row:span 2}
+ .wrap,.gallery{padding-left:18px;padding-right:18px}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <span>♡</span><span>♥</span><span>✦</span><span>♡</span><span>✧</span><span>♥</span><span>♡</span>
+</div>
+
+<button class="music" id="musicBtn" onclick="toggleMusic()" aria-label="Putar atau jeda Sempurna">♫</button>
+<div id="ytPlayer" style="position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none"></div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kicker">a little story for jihan</div>
+    <h1>our little<br><em>story</em> ♡</h1>
+    <p>
+      bukan cerita yang selalu mulus, bukan juga cerita yang selalu sempurna,
+      tapi justru karena banyak hal yang kita lewati, perjalanan ini jadi punya arti sendiri
+    </p>
+    <a class="btn" href="#story">buka cerita kita ↓</a>
+  </div>
+  <div class="scroll">scroll pelan-pelan ♡</div>
+</section>
+
+<section id="story" class="wrap reveal">
+  <div class="eyebrow">01 — tentang kita</div>
+  <h2>ternyata kita<br>sejauh ini</h2>
+  <div class="story">
+    <p>jihan, kalau dipikir-pikir, lucu juga ya bagaimana dua orang bisa bertemu, saling mengenal, lalu akhirnya punya begitu banyak cerita yang cuma kita berdua yang benar-benar mengerti</p>
+    <p>selama perjalanan ini kita sudah melewati banyak hal, ada hari yang bikin kita ketawa sampai lupa waktu, ada juga hari yang bikin kita sama-sama capek, bingung, kecewa, bahkan hampir menyerah</p>
+    <p>tapi dari semua itu aku belajar satu hal, hubungan bukan tentang siapa yang tidak pernah salah, melainkan tentang dua orang yang mau belajar, mau memperbaiki, dan mau tetap memilih satu sama lain setelah melihat sisi baik dan buruknya</p>
+  </div>
+</section>
+
+<section class="photo-section reveal">
+  <div class="photo-card"><div class="tape"></div><img src="foto1.jpeg" alt="foto jihan 1"><div class="caption">salah satu dari sekian banyak momen yang bikin aku senyum sendiri 🤍</div></div>
+  <div class="photo-card"><div class="tape"></div><img src="foto2.jpeg" alt="foto jihan 2"><div class="caption">dan ternyata kamu memang selalu punya cara sendiri buat bikin suasana jadi lebih berwarna</div></div>
+</section>
+
+<section class="letter-bg reveal">
+  <div class="letter">
+    <div class="hello">untuk jihan,</div>
+    <h2>kalau suatu hari<br>kita baca ini lagi...</h2>
+    <p>aku cuma ingin kita ingat bahwa perjalanan kita tidak selalu mudah, tapi setiap kesulitan yang pernah datang juga mengajarkan kita sesuatu</p>
+    <p>kita pernah salah paham, pernah punya ego masing-masing, pernah merasa capek, pernah takut kehilangan, dan pernah berada di titik di mana semuanya terasa berat</p>
+    <p>tapi di antara semua itu, masih ada kita yang mencoba memahami, masih ada percakapan yang akhirnya membuat kita mengerti, masih ada maaf yang diberikan, dan masih ada alasan untuk melanjutkan</p>
+    <p>aku tidak mau menjanjikan kalau ke depannya tidak akan ada masalah lagi, karena itu mungkin tidak realistis. yang ingin aku janjikan adalah aku akan berusaha supaya setiap masalah tidak menjadi alasan untuk saling meninggalkan</p>
+    <p>semoga kalau nanti kita melihat kembali halaman ini, kita bisa bilang, “ternyata dulu kita pernah sejauh itu, ya.” lalu kita ketawa karena drama-drama kecil yang dulu terasa besar ternyata bisa kita lewati juga</p>
+    <p>dan kalau boleh berharap, aku ingin cerita ini tidak berhenti di sini. semoga masih ada banyak halaman setelah halaman ini, banyak foto baru, banyak cerita baru, banyak tawa, dan tentu saja sedikit drama biar hidup kita tidak terlalu serius 😭🤍</p>
+  </div>
+</section>
+
+<section class="gallery reveal">
+  <div class="eyebrow">02 — little moments</div>
+  <h2>beberapa wajah<br>dari cerita kita</h2>
+  <div class="grid">
+    <figure><img src="foto3.jpeg" alt="foto jihan 3"></figure>
+    <figure><img src="foto4.jpeg" alt="foto jihan 4"></figure>
+    <figure><img src="foto5.png" alt="foto jihan 5"></figure>
+  </div>
+</section>
+
+<section class="funny reveal">
+  <span class="emoji">🎀</span>
+  <div class="eyebrow">03 — sedikit kejujuran</div>
+  <h2>kita tuh lucu juga</h2>
+  <p>
+    kadang bisa romantis, kadang sok dewasa, kadang ngobrol serius,
+    lima menit kemudian malah bahas hal random yang sebenarnya tidak penting sama sekali 😭
+    tapi mungkin justru itu yang bikin semuanya terasa nyaman.
+    jadi kalau nanti ada yang bilang hubungan kita harus selalu serius,
+    jangan percaya sepenuhnya... kita tetap butuh ketawa sampai sakit perut.
+  </p>
+</section>
+
+<section class="wrap reveal">
+  <div class="eyebrow">04 — perjalanan</div>
+  <h2>yang sudah kita lewati</h2>
+  <div class="timeline">
+    <div class="item"><div class="dot"></div><span>awal</span><h3>dua orang, satu cerita baru</h3><p>semuanya dimulai dari rasa penasaran, percakapan kecil, lalu perlahan berubah menjadi sesuatu yang berarti</p></div>
+    <div class="item"><div class="dot"></div><span>di tengah jalan</span><h3>belajar memahami</h3><p>kita mulai tahu bahwa sayang bukan cuma soal momen manis, tapi juga tentang belajar memahami perasaan satu sama lain</p></div>
+    <div class="item"><div class="dot"></div><span>hari-hari sulit</span><h3>tetap mencoba</h3><p>ada cobaan yang datang dari banyak arah, tapi setiap kali kita memilih untuk berbicara dan memperbaiki, kita mendapatkan pelajaran baru</p></div>
+    <div class="item"><div class="dot"></div><span>sekarang</span><h3>masih di sini</h3><p>dan fakta paling sederhana yang paling aku syukuri adalah kita masih punya kesempatan untuk menulis halaman berikutnya</p></div>
+  </div>
+</section>
+
+<section class="dark reveal">
+  <div class="inside">
+    <div class="eyebrow">05 — satu hal yang ingin aku bilang</div>
+    <h2>aku tidak butuh cerita yang sempurna</h2>
+    <p>
+      aku lebih memilih cerita yang nyata. cerita yang kadang berantakan tapi diperbaiki,
+      yang kadang melelahkan tapi tetap diperjuangkan, yang kadang membuat kita diam
+      tapi akhirnya membuat kita belajar berbicara dengan lebih baik.
+    </p>
+    <br>
+    <p>
+      jadi, jihan, terima kasih sudah menjadi bagian dari perjalanan ini.
+      terima kasih untuk tawa, perhatian, kesabaran, cerita-cerita kecil,
+      dan bahkan untuk hari-hari sulit yang akhirnya membuat kita lebih mengenal satu sama lain.
+    </p>
+    <br>
+    <p><strong>semoga kita bisa sama-sama terus sampai ke depannya.</strong> bukan karena semuanya akan selalu mudah, tapi karena kita sama-sama mau berusaha ketika keadaan sedang tidak mudah.</p>
+  </div>
+</section>
+
+<section class="promise reveal">
+  <div class="heart">♡</div>
+  <div class="eyebrow">06 — harapan kecil</div>
+  <h2>semoga masih kita</h2>
+  <p>
+    semoga nanti ada lebih banyak hari baik daripada hari buruk,
+    lebih banyak tawa daripada air mata, lebih banyak foto daripada salah paham,
+    dan lebih banyak alasan untuk berkata “untung dulu kita tetap bertahan.”
+  </p>
+  <p style="margin-top:22px;color:#735963;line-height:2">
+    kalau perjalanan ini masih panjang, ayo kita jalan pelan-pelan,
+    saling tunggu kalau salah satu sedang lelah, saling mengingatkan kalau mulai salah arah,
+    dan jangan lupa ketawa di tengah perjalanan.
+  </p>
+</section>
+
+<section class="final reveal">
+  <img src="foto1.jpeg" alt="foto penutup">
+  <div class="overlay">
+    <p>dari sekian banyak cerita yang bisa ditulis,</p>
+    <h2>semoga tetap<br>kamu, jihan</h2>
+    <span>♡</span>
+  </div>
+</section>
+
+<section class="end reveal">
+  <div style="font-size:45px;color:#d97697">♡</div>
+  <h2>sampai halaman berikutnya</h2>
+  <p>
+    kalau suatu hari kita membuka website kecil ini lagi,
+    semoga kita masih bisa tersenyum karena ternyata semua yang pernah kita lewati
+    bukan akhir dari cerita, tapi bagian dari perjalanan menuju hari-hari yang lebih baik.
+  </p>
+  <div class="sign">dibuat dengan banyak cerita,<br>sedikit drama,<br>dan rasa sayang yang banyak 🤍</div>
+</section>
+
+<script>
+let player = null;
+let playing = false;
+function onYouTubeIframeAPIReady(){
+  player = new YT.Player('ytPlayer',{
+    height:'1', width:'1',
+    videoId:'jStNaVCW838',
+    playerVars:{autoplay:0,controls:0,loop:1,playlist:'jStNaVCW838',playsinline:1,rel:0},
+    events:{onStateChange:(e)=>{
+      if(e.data===YT.PlayerState.ENDED){ player.playVideo(); }
+    }}
+  });
+}
+function toggleMusic(){
+  const btn=document.getElementById('musicBtn');
+  if(!player || !player.playVideo){
+    alert('musik belum siap, tunggu sebentar lalu tekan tombol ♫ lagi ya');
+    return;
+  }
+  if(!playing){
+    player.playVideo();
+    playing=true;
+    btn.textContent='❚❚';
+    btn.classList.add('playing');
+  }else{
+    player.pauseVideo();
+    playing=false;
+    btn.textContent='♫';
+    btn.classList.remove('playing');
+  }
+}
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting)e.target.classList.add('show');
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.textContent=Math.random()>.5?'♡':(Math.random()>.5?'♥':'✦');
+  h.style.cssText=`position:fixed;left:${Math.random()*100}vw;bottom:-30px;color:#df7898aa;font-size:${10+Math.random()*18}px;z-index:0;pointer-events:none`;
+  document.body.appendChild(h);
+  const d=6000+Math.random()*5000;
+  h.animate([
+    {transform:'translateY(0) rotate(0)',opacity:0},
+    {transform:`translateY(-${innerHeight+100}px) rotate(360deg)`,opacity:1}
+  ],{duration:d,easing:'linear'});
+  setTimeout(()=>h.remove(),d);
+},800);
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
