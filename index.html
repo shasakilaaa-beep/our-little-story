@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffb6d9, #ffd6e9, #fff0f7);
+  color: #7b2852;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -50px;
+  animation: naik 8s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes naik {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Main card */
+.container {
+  width: 92%;
+  max-width: 650px;
+  margin: 45px auto;
+  padding: 30px 22px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  padding: 35px 22px;
+  box-shadow: 0 15px 45px rgba(180, 70, 120, 0.25);
+  border: 2px solid rgba(255,255,255,0.8);
+}
+
+.emoji {
+  font-size: 55px;
+  animation: loncat 1.5s ease-in-out infinite;
+}
+
+@keyframes loncat {
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+h1 {
+  margin-top: 12px;
+  font-size: 32px;
+  color: #e83e8c;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #9b5277;
+}
+
+/* Typing box */
+.typing-box {
+  margin-top: 25px;
+  min-height: 145px;
+  background: #fff7fb;
+  border-radius: 22px;
+  padding: 24px 18px;
+  box-shadow: inset 0 0 20px rgba(255,130,190,0.12);
+}
+
+#typing {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  background: #e83e8c;
+  animation: kedip 0.7s infinite;
+}
+
+@keyframes kedip {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  border: none;
+  background: linear-gradient(135deg, #ff4f9a, #ff78b5);
+  color: white;
+  padding: 15px 27px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(232,62,140,0.3);
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: scale(1.06);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Surprise */
+#surprise {
+  display: none;
+  margin-top: 28px;
+  animation: muncul 0.8s ease;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.surprise-title {
+  font-size: 24px;
+  color: #e83e8c;
+  margin-bottom: 15px;
+}
+
+.message {
+  background: linear-gradient(135deg, #fff0f7, #ffe0ef);
+  padding: 22px;
+  border-radius: 22px;
+  line-height: 1.9;
+  font-size: 16px;
+  color: #73304f;
+  text-align: left;
+}
+
+.highlight {
+  color: #e83e8c;
+  font-weight: bold;
+}
+
+/* Cute decorations */
+.cute {
+  margin-top: 22px;
+  font-size: 30px;
+  animation: goyang 2s infinite;
+}
+
+@keyframes goyang {
+  0%,100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.footer {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #a85b80;
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  top: -20px;
+  font-size: 20px;
+  animation: jatuh 3s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes jatuh {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background" id="background"></div>
+
+<div class="container">
+  <div class="card">
+
+    <div class="emoji">💗</div>
+
+    <h1>Untuk Kamu, Sayanggggg 💕</h1>
+
+    <p class="subtitle">
+      ada sedikit sesuatu yang aku buat khusus buat kamuuu 🌷
+    </p>
+
+    <div class="typing-box">
+      <span id="typing"></span>
+      <span class="cursor"></span>
+    </div>
+
+    <button onclick="showSurprise()">
+      💝 Buka Kejutannnn 💝
+    </button>
+
+    <div id="surprise">
+
+      <div class="surprise-title">
+        🎀 Surpriseeeee 🎀
+      </div>
+
+      <div class="message">
+
+        <p>
+          <span class="highlight">Sayangggggggg...</span> 🤍
+        </p>
+
+        <br>
+
+        <p>
+          Aku cuma mau bilang makasihhhhhh karena sampai sekarang
+          kita masih sama-sama. Kita udah ngelewatin banyak banget
+          hal, dari hal kecil sampai hal yang mungkin pernah bikin
+          kita sama-sama capeeek.
+        </p>
+
+        <br>
+
+        <p>
+          Kita pernah salah paham, pernah marah, pernah kecewa,
+          pernah diem-dieman, bahkan mungkin pernah ada di titik
+          dimana kita sama-sama bertanya apakah kita masih bisa
+          lanjut sejauh ini.
+        </p>
+
+        <br>
+
+        <p>
+          Tapiii ternyata kita masih di sini.
+          Masih sama-sama.
+          Masih mencoba.
+          Masih mau memperbaiki semuanya pelan-pelannnn. 🥺💗
+        </p>
+
+        <br>
+
+        <p>
+          Aku nggak mau bilang hubungan kita bakal selalu sempurna,
+          karena aku tahu pasti akan ada badai lagi nantinya.
+          Tapi aku pengen kalau nanti badai itu datang,
+          kita jangan langsung memilih pergi.
+        </p>
+
+        <br>
+
+        <p>
+          Kalau salah satu dari kita capek,
+          semoga yang satunya bisa jadi tempat istirahat.
+          Kalau salah satu sedang marah,
+          semoga yang satunya mau belajar memahami.
+          Kalau ada masalah,
+          semoga kita bisa menyelesaikannya bareng-barengggg.
+        </p>
+
+        <br>
+
+        <p>
+          Aku juga sadar aku masih banyak kurangnya.
+          Masih banyak hal dari aku yang mungkin bikin kamu kecewa.
+          Tapi aku mau terus belajar menjadi lebih baik,
+          bukan cuma lewat kata-kata,
+          tapi juga lewat sikap dan tindakan.
+        </p>
+
+        <br>
+
+        <p>
+          Terima kasih karena sudah bertahan sejauh ini.
+          Terima kasih karena pernah memilih aku.
+          Dan terima kasih karena sudah menjadi bagian dari
+          cerita yang sampai sekarang masih kita tulis bersama. 💗
+        </p>
+
+        <br>
+
+        <p>
+          Semoga setelah semua yang kita lewati,
+          kita bisa semakin dewasa,
+          semakin ngerti satu sama lain,
+          dan semakin pandai menjaga hati masing-masing.
+        </p>
+
+        <br>
+
+        <p>
+          Aku nggak janji semuanya akan selalu mudah,
+          tapi aku ingin setiap kali ada masalah,
+          kita ingat lagi kenapa dulu kita memilih untuk bersama.
+        </p>
+
+        <br>
+
+        <p>
+          <span class="highlight">
+          Jadiii... jangan menyerah sama kita yaaa, sayangggggg. 🥺💗
+          </span>
+        </p>
+
+        <br>
+
+        <p>
+          Mari kita jalanin semuanya pelan-pelannnn,
+          satu hari demi satu hari,
+          sambil sama-sama belajar,
+          sama-sama berubah menjadi lebih baik,
+          dan sama-sama menjaga apa yang sudah kita punya.
+        </p>
+
+        <br>
+
+        <p style="text-align:center; font-size:22px;">
+          💗🫶🏻🌷🎀✨
+        </p>
+
+      </div>
+
+      <div class="cute">
+        🧸💗🌸🎀💐
+      </div>
+
+    </div>
+
+    <div class="footer">
+      dibuat dengan sedikit kode dan banyaaakkk rasa 💗
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+/* Typing animation */
+const text =
+"Sayanggggggg... makasihhhhhh yaaa sudah tetap bertahan sama aku sampai sejauhhhh ini. Kita udah melewati banyaaakkk banget hal bareng-barengggg, dan aku cuma mau bilang kalau aku menghargai setiap proses yang kita lewatiii. 💗";
+
+let index = 0;
+
+function typingEffect() {
+  if (index < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typingEffect, 45);
+  }
+}
+
+typingEffect();
+
+
+/* Floating hearts */
+const background = document.getElementById("background");
+
+const hearts = ["💗","💕","💖","💞","🌸","🎀","✨","🩷"];
+
+function createHeart() {
+
+  const heart = document.createElement("div");
+
+  heart.className = "heart";
+
+  heart.innerHTML =
+    hearts[Math.floor(Math.random() * hearts.length)];
+
+  heart.style.left =
+    Math.random() * 100 + "vw";
+
+  heart.style.fontSize =
+    (15 + Math.random() * 25) + "px";
+
+  heart.style.animationDuration =
+    (5 + Math.random() * 5) + "s";
+
+  background.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+setInterval(createHeart, 450);
+
+
+/* Surprise button */
+function showSurprise() {
+
+  const surprise =
+    document.getElementById("surprise");
+
+  surprise.style.display = "block";
+
+  createConfetti();
+
+  setTimeout(() => {
+    surprise.scrollIntoView({
+      behavior: "smooth",
+      block: "center"
+    });
+  }, 100);
+}
+
+
+/* Confetti */
+function createConfetti() {
+
+  const items =
+    ["💗","💕","💖","🌸","🎀","✨","🩷","💐"];
+
+  for (let i = 0; i < 35; i++) {
+
+    const confetti =
+      document.createElement("div");
+
+    confetti.className = "confetti";
+
+    confetti.innerHTML =
+      items[Math.floor(Math.random() * items.length)];
+
+    confetti.style.left =
+      Math.random() * 100 + "vw";
+
+    confetti.style.animationDuration =
+      (2 + Math.random() * 2) + "s";
+
+    confetti.style.fontSize =
+      (15 + Math.random() * 18) + "px";
+
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+      confetti.remove();
+    }, 4000);
+  }
+}
+
+</script>
+
+</body>
+</html>
